@@ -1,1 +1,116 @@
-<h1>test</h1>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Travis F. Campbell - Github.io</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Landing Page For Travis F. Campbell: Software Engineering Student at Heriot-Watt University" />
+  <style>
+        * {
+            font-family: Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: rgb(250,250,250);
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: auto;
+            padding: 10px;
+            max-width: calc(100% - 20px);
+            border: 1px solid rgb(20,20,20);
+            box-shadow: 6px 8px 0 rgb(20,20,20);
+            border-bottom-right-radius: 8px;
+            background-color: rgb(255,255,255);
+        }
+
+        .card .heading {
+            margin: 5px 0 25px;
+            font-weight: normal;
+            font-size: 26px;
+        }
+
+        .card .section {
+            padding: 5px 25px;
+        }
+
+        .card .section.main {
+            max-width: 500px;
+            border-right: 1px solid rgb(20,20,20);
+        }
+
+        .card .section.side {
+            min-width: 75px;
+        }
+
+        .card .section.side .heading {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .card .links {
+            display: grid;
+            gap: 15px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .card a {
+            cursor: pointer;
+            color: rgb(20,20,20);
+            text-decoration: underline;
+        }
+
+        .card a:hover {
+            color: black;
+        }
+
+        .card a:active {
+            text-decoration: none;
+        }
+
+        .card p {
+            margin: 20px 0;
+        }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="main section">
+        <h1 class="heading">Travis F. Campbell</h1>
+        <p>
+            Welcome To My Little Landing Page.
+        </p>
+
+        <p>
+            This Is A Temporary Page To Fill In Whilst My Main Site Is <a href="https://github.com/jeff0282/webgoose">Under-Development</a>.
+        </p>
+
+        <p>
+            I'm A Software Engineering Student At Heriot-Watt University, And Am The President Of <a href="https://www.hwunion.com/societies/anime/">The HW Anime & Manga Society</a>.
+        </p>
+    </div>
+
+    <div class="side section">
+        <h2 class="heading"> Links </h2>
+        <div class="links">
+            <a href="mailto:social@jeff.webgoose.net">Email</a>
+            <a href="https://github.com/jeff0282">Github</a>
+        </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
