@@ -17,15 +17,17 @@
         }
 
         .card {
+            box-sizing: border-box;
             display: grid;
-            grid-template-columns: max-content max-content;
+            grid-template-columns: 1fr max-content;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             margin: auto;
             padding: 10px;
-            max-width: calc(100% - 20px);
+            width: 600px;
+            max-width: calc(100% - 40px);
             border: 1px solid rgb(20,20,20);
             box-shadow: 6px 8px 0 rgb(20,20,20);
             border-bottom-right-radius: 8px;
@@ -33,17 +35,21 @@
         }
 
         .card .heading {
-            margin: 5px 0 25px;
+            margin: 5px 0;
             font-weight: normal;
+            font-size: 30px;
+        }
+
+        .card .section .heading {
+            margin: 5px 0 25px;
             font-size: 26px;
         }
 
         .card .section {
-            padding: 5px 25px;
+            padding: 5px 15px;
         }
 
         .card .section.main {
-            max-width: 500px;
             border-right: 1px solid rgb(20,20,20);
         }
 
