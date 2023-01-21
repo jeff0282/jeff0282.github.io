@@ -1,0 +1,186 @@
+
+/*
+
+webgoose.net
+
+CSS DEFINING MAIN STRUCTURE OF BASE TEMPLATE
+
+this site has two primary states
+- desktop
+- mobile
+
+The layout is defined desktop first, media queries transform to mobile layout
+
+*/
+
+
+body {
+    margin: auto;
+    padding: 20px;
+
+    box-sizing: border-box;
+    width: 1200px;
+    max-width: 100%;
+}
+
+header .banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .banner h1 {
+    font-family: serif;
+    font-size: 25px;
+
+    margin: 0;
+}
+
+header .banner h1 span {
+    font-family: monospace;
+    font-size: 18px;
+    color: rgb(40,40,40);
+}
+
+header .banner h2 {
+    font-family: serif;
+    font-size: 16px;
+    color: rgb(40,40,40);
+
+    margin: 0;
+}
+
+header .banner img {
+    width: 80px;
+    border: 1px solid black;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+    padding: 7px 0;
+    margin-top: 20px;
+}
+
+header nav a {
+    display: block;
+
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 16px;
+    color: black;
+}
+
+header nav a::first-letter {
+    text-decoration: underline;
+}
+
+header nav a:visited {
+    color: black;
+}
+
+header nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+header nav a:active {
+    background-color: transparent;
+    color: black;
+}
+
+
+
+
+
+
+
+/*
+    PRIMARY CONTENT RULES
+*/
+
+main {
+    padding: 50px 0;
+}
+
+main a {
+    text-decoration: dotted underline;
+}
+
+main :first-child {
+    margin-top: 0 !important;
+}
+
+main > img {
+    display: block;
+
+    box-sizing: border-box;
+    max-width: 100%;
+    border: 1px solid black;
+    
+    padding: 5px;
+    margin: 30px auto;
+}
+
+
+
+
+/*
+    BADGES 
+*/
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+
+    border-top: 1px solid black;
+
+    padding: 20px 0;
+}
+
+.badges img {
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid black;
+
+    padding: 1px;
+}
+
+
+
+/*
+    GENERAL TEXT OPTIONS
+*/
+
+a {
+    cursor: pointer;
+}
+
+pre {
+    overflow: auto;
+
+    border: 1px solid black;
+    white-space: pre-line;
+    font-size: 14px;
+
+    padding: 0 10px;
+    margin: 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 35px;
+    font-weight: normal;
+}

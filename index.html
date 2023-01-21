@@ -1,121 +1,103 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-  <title>Travis F. Campbell - Github.io</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Landing Page For Travis F. Campbell: Software Engineering Student at Heriot-Watt University" />
-  <style>
-        * {
-            font-family: Helvetica, sans-serif;
-        }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Travis F. Campbell - Webgoose.net</title>
 
-        body {
-            background-color: rgb(250,250,250);
-        }
-
-        .card {
-            box-sizing: border-box;
-            display: grid;
-            grid-template-columns: 1fr max-content;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin: auto;
-            padding: 10px;
-            width: 600px;
-            max-width: calc(100% - 40px);
-            border: 1px solid rgb(20,20,20);
-            box-shadow: 6px 8px 0 rgb(20,20,20);
-            border-bottom-right-radius: 8px;
-            background-color: rgb(255,255,255);
-        }
-
-        .card .heading {
-            margin: 5px 0;
-            font-weight: normal;
-            font-size: 30px;
-        }
-
-        .card .section .heading {
-            margin: 5px 0 25px;
-            font-size: 26px;
-        }
-
-        .card .section {
-            padding: 5px 15px;
-        }
-
-        .card .section.main {
-            border-right: 1px solid rgb(20,20,20);
-        }
-
-        .card .section.side {
-            min-width: 75px;
-        }
-
-        .card .section.side .heading {
-            font-size: 20px;
-            text-align: center;
-        }
-
-        .card .links {
-            display: grid;
-            gap: 15px;
-            text-align: center;
-            font-size: 16px;
-        }
-
-        .card a {
-            cursor: pointer;
-            color: rgb(20,20,20);
-            text-decoration: underline;
-        }
-
-        .card a:hover {
-            color: black;
-        }
-
-        .card a:active {
-            text-decoration: none;
-        }
-
-        .card p {
-            margin: 20px 0;
-        }
-
-  </style>
+    <link rel="stylesheet" href="/static/stylesheet/main.css">
 </head>
 
 <body>
 
-  <div class="card">
-    <div class="main section">
-        <h1 class="heading">Travis F. Campbell</h1>
-        <p>
-            Welcome To My Little Landing Page.
-        </p>
-
-        <p>
-            This Is A Temporary Page To Fill In Whilst My Main Site Is <a href="https://github.com/jeff0282/webgoose">Under-Development</a>.
-        </p>
-
-        <p>
-            I'm A Software Engineering Student At Heriot-Watt University, And Am The President Of <a href="https://www.hwunion.com/societies/anime/">The HW Anime & Manga Society</a>.
-        </p>
-    </div>
-
-    <div class="side section">
-        <h2 class="heading"> Links </h2>
-        <div class="links">
-            <a href="mailto:social@jeff.webgoose.net">Email</a>
-            <a href="https://github.com/jeff0282">Github</a>
+    <header>
+        <div class="banner">
+            <div>
+                <h1>Travis F. Campbell <span>&lt;a.k.a. Jeff&gt;</span></h1>
+                <h2>Bloat Free - No Artificial Colours, Flavours, or Sweeteners !!</h2>
+            </div>
+            <img src="/static/res/std/konata-2.jpg">
         </div>
-    </div>
-  </div>
+
+        <nav>
+
+            <a href="/">Home</a>
+    
+        </nav>
+    </header>
+    
+
+    <main>
+        <img src="/static/res/std/lamlash-bay-from-fishfarm.jpg">
+        
+        <h1>Welcome To My Little Site :)</h1>
+
+        <p>
+            Hey! Welcome to my little corner of the Web! I'm a massive fan of Web 1.0 (muh nostalgia) and simple, clean websites, so this site is pretty much all that.
+        </p>
+
+        <p>
+            I feel websites should be content first, and not try to sell themselves to you with tons of visuals and stuff. There are some sites, however, that blend visuals and content really well (see '<a href="https://microsounds.github.io">microsounds.github.io</a>')
+        </p>
+
+        <p>
+            This site is currently part of a pretty big project of mine, that being <a href="https://github.com/jeff0282/webgoose">Webgoose</a>, a static site generator that will eventually be used to build this site.
+            Currently, Webgoose is non-functional but soon, soon I promise I'll have it working... I just need a few more months....
+        </p>
+        
+        
+        <h1>Who Am I?</h1>
+
+        <p>
+            I'm Travis (otherwise known as 'Jeff'), a Software Engineering Student and a massive nerd! I'm majorly into software design and development; trains, buses, and all public transport stuffs; audio hardware (mostly headphones); and just building random stuff!
+        </p>
+
+        <p>
+            Once I've got my static site generator going, I aim to put online all my interests and stuff and make this my little sanctuary/safespace :3
+        </p>
+
+
+        <h1>Contacting Me:</h1>
+
+        <p>
+            You're welcome to contact me using the email address in the box below. I don't use any social media platforms other than Discord (not by choice!!), so email is the best way to go for me.
+        </p>
+
+        <p>
+            The garbled text in the box below is my email address encoded to Base64, the rest of the string is the Bash Script to decode it. 
+            If you're not running a Linux System, copy the garbled text and paste it into an online Base64 Decoder.
+        </p>
+
+        <p>
+            This extra step is to prevent my email being sniffed by bots and the like.. sorry!!
+        </p>
+
+        <pre>
+            <code>
+                echo "dGZjIDxhdD4gd2ViZ29vc2UgPGRvdD4gbmV0" | base64 --decode
+            </code>
+        </pre>
+
+    </main>
+
+
+    <footer>
+        
+        <div class="badges">
+            <img src="/static/res/badges/main.png">
+            <a href="https://debian.org"><img src="/static/res/badges/debian.gif"></a>
+            <a href="https://silly.city"><img src="/static/res/badges/silly-city-yay.gif"></a>
+            <img src="/static/res/badges/konata-1.gif">
+            <a href="https://youtube.com/watch?v=3n2_OloKuiY"><img src="/static/res/badges/len.png"></a>
+            <a href="https://github.com/jeff0282"><img src="/static/res/badges/github.jpg"></a>
+            <a href="https://python.org"><img src="/static/res/badges/python.png"></a>
+            <img src="/static/res/badges/rail.png">
+            <img src="/static/res/badges/bus.png">
+        </div>
+
+    </footer>
 
 </body>
 
