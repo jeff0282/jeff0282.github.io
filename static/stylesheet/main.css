@@ -1,280 +1,182 @@
 
 /*
-
-webgoose.net
-
-CSS DEFINING MAIN STRUCTURE OF BASE TEMPLATE
-
-this site has two primary states
-- desktop
-- mobile
-
-The layout is defined desktop first, media queries transform to mobile layout
-
+Webgoose.net Primary CSS Stylesheet
 */
 
-
 body {
-    margin: auto;
-    padding: 20px;
-
-    box-sizing: border-box;
-    width: 1200px;
-    max-width: 100%;
-}
-
-header .banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header .banner h1 {
     font-family: serif;
-    font-size: 25px;
 
-    margin: 0;
+    background-color: rgb(245, 245, 245);
 }
 
-header .banner h1 span {
+
+.sections-wrapper {
+    display: grid;
+    grid-template-columns: 125px auto;
+    column-gap: 40px;
+
+    margin: 60px auto;
+    width: calc(100% - 80px);
+    max-width: 1150px;
+}
+
+
+.sections-wrapper > header {
     font-family: monospace;
-    font-size: 18px;
-    color: rgb(40,40,40);
 }
 
-header .banner h2 {
-    font-family: serif;
-    font-size: 16px;
-    color: rgb(40,40,40);
 
-    margin: 0;
-}
-
-header .banner img {
-    width: 80px;
-    border: 1px solid black;
-}
-
-header nav {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-
-    padding: 7px 0;
-    margin-top: 20px;
-}
-
-header nav a {
-    display: block;
-
-    text-decoration: none;
-    font-family: monospace;
-    font-size: 16px;
+.sections-wrapper > header > .banner-text {
     color: black;
-}
-
-header nav a::first-letter {
+    font-size: 17px;
     text-decoration: underline;
 }
 
-header nav a:visited {
-    color: black;
-}
 
-header nav a:hover {
-    background-color: black;
-    color: white;
-}
-
-header nav a:active {
-    background-color: transparent;
-    color: black;
-}
-
-
-/*
-    HANDLING SMALL VIEWPORTS
-*/
-
-@media only screen and (max-width: 650px) {
-    header .banner img {
-        display: none;
-    }
-}
-
-
-
-
-
-
-/*
-    PRIMARY CONTENT RULES
-*/
-
-main {
-    margin: 25px 0;
-    font-family: serif;
-}
-
-main a {
+.sections-wrapper > header > .banner-text:hover {
     text-decoration: dotted underline;
 }
 
-main :first-child {
-    margin-top: 0 !important;
-}
 
-main > img {
-    display: block;
-
-    box-sizing: border-box;
-    max-width: 100%;
-    border: 1px solid black;
-    
-    padding: 5px;
-    margin: 30px auto;
-}
-
-
-
-
-/*
-    STYLING OF LINKS SECTION
-    -webrings
-    -badges
-*/
-
-.links {
-    text-align: center;
-    border-top: 1px solid black;
-    font-family: monospace;
-    font-size: 16px;
-
-    margin: 50px 0;
-}
-
-
-/*
-    BADGES 
-*/
-
-.badges {
+.sections-wrapper > header > nav {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    
+    margin-top: 40px;
 
-    margin: 30px 0;
+    font-size: 13px;
 }
 
-.badges img {
-    width: 48px;
-    height: 48px;
+ 
 
-    border: 1px solid black;
+.sections-wrapper > header > nav > a {
+    display: block;
+    flex: 0 0 100%;
 
-    padding: 1px;
-}
+    padding: 5px 3px 5px 0;
 
-
-/*
-    WEBRINGS
-*/
-
-.webring {
-    position: relative;
-    z-index: 1000;
-
-    height: 1px;
-    width: calc(100% - 10px);
-    background-color: black;
-
-    margin: 50px 0;
-}
-
-.webring .button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2000;
-
-    border: 1px solid black;
-    box-shadow: 3px 3px 0 black;
-    background-color: white;
     color: black;
-    text-decoration: none;
-
-    padding: 5px;
-}
-
-.webring .button:active {
-    box-shadow: none;
-    transform: translate(3px, calc(-50% + 3px));
-}
-
-.webring .button.back {
-    left: -5px;
-}
-
-.webring .button.next {
-    right: -5px;
-}
-
-.webring .label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    border: 1px solid black;
-    background-color: white;
-
-    padding: 5px;
-}
-
-/*
-    SPECIFIC WEBRING STYLING
-*/
-
-#silly-city .label {
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 16px;
-    color: #ff0073;
 }
 
 
+.sections-wrapper > header > nav > a:hover {
+    color: white;
+    background-color: black;
+}
 
 
-/*
-    FOOTER
-*/
+.sections-wrapper > main {
+    padding: 0 5px;
+}
 
-footer {
-    border-top: 1px solid black;
+
+.sections-wrapper > main > .breadcrumbs {
+    margin-bottom: 20px;
+    margin-top: 0;
+
     font-size: 14px;
-
-    padding: 5px 0;
-}
-
-footer .watermark {
-    color: rgb(40,40,40);
 }
 
 
+.sections-wrapper > main > .breadcrumbs > span::before {
+    content: " >> ";
+    
+    color: rgb(50,50,50);
+}
 
-/*
-    GENERAL TEXT OPTIONS
-*/
 
+.sections-wrapper > main > .breadcrumbs > span > a {
+    color: rgb(80,80,80)
+}
+
+
+.sections-wrapper > main > .breadcrumbs > span > a:hover{
+    text-decoration: underline;
+    color: rgb(0,0,0);
+}
+
+
+
+/* general */
 a {
     cursor: pointer;
 }
 
-pre {
+main h1,
+main h2,
+main h3 {
+    margin-bottom: 5px;
+    padding: 1px;
+}
+
+main h1,
+main h2 {
+    margin-top: 35px;
+
+    border-width: 0 0 1px 0;
+    border-style: solid;
+}
+
+main h1 {
+    font-size: 32px;
+    border-color: black;
+
+    font-weight: 400;
+}
+
+main h2 {
+    font-size: 26px;
+    font-weight: 500;
+    border-color: rgb(150, 150, 150);
+}
+
+main h3 {
+    margin-top: 26px;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+
+main h4,
+main h5,
+main h6 {
+    margin-top: 15px;
+    margin-bottom: 2px;
+    
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+main h3::before,
+main h4::before,
+main h5::before,
+main h6::before {
+    content: ">> "
+}
+
+main h4 {
+    font-size: 20px
+}
+
+main h5 {
+    font-size: 18px;
+}
+
+main h6 {
+    font-size: 16px;
+}
+
+
+main p {
+    margin: 13px 0;
+
+    font-size: 15px;
+}
+
+main pre {
     overflow: auto;
 
     border: 1px solid black;
@@ -285,12 +187,20 @@ pre {
     margin: 30px 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: 35px;
-    font-weight: normal;
+main img,
+main iframe {
+    display: block;
+    box-sizing: border-box;
+
+    margin: 20px auto;
+    padding: 5px;
+    width: 100%;
+    max-height: 600px;
+
+    border: 1px solid black;
+}
+
+iframe.silly {
+    margin-top: 50px;
+    height: 80px;
 }
