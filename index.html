@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/static/stylesheet/main.css">
 
     <!-- PREFETCH GIF POTGOOSE BANNER IMAGE USED IN CSS -->
-    <link rel="prefetch" href="/static/res/std/pot-goose-gif.gif">
+    <link rel="prefetch" as="" href="/static/res/std/pot-goose-gif.gif">
 </head>
 
 <body>
@@ -25,10 +25,10 @@
 
         <header>
             <div class="inner">
-                <a href="/" class="banner">
-                    <img src="/static/res/std/pot-goose-normal.png">
-                    <h1>potgoo.se</h1> 
-                </a>
+                    <img id="honk_trigger" src="/static/res/std/pot-goose-normal.png">
+                    <a href="/" class="banner">
+                        <h1>potgoo.se</h1>
+                    </a>
                 <nav>
                     <a href="/">Home</a>
                     <a href="/other/">Other Pages</a>
@@ -44,7 +44,7 @@
             
             <img src="/static/res/std/lamlash-bay-from-fishfarm.webp">
 
-            <h1> Welcome to Potgoo.se </h1>
+            <h1> Welcome to <i>potgoo.se</i> </h1>
 
             <span> [!! Under Construction - Hard Hat Area !!]</span>
 
@@ -93,7 +93,11 @@ echo c29jaWFsQHdlYmdvb3NlLm5ldA== | base64 --decode
             <iframe id="silly-city" src="https://silly.city/embed.html?user=jeff" title="silly.city webring" frameborder="no"></iframe>
         </main>
 
+        <img src="/static/res/badges/infamous-konata-pic.png">
+
     </div>
+
+    <script src="/static/script/honk.js"></script>
 
 </body>
 

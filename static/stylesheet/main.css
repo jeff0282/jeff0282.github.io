@@ -46,6 +46,15 @@ FONTS
 }
 
 
+/*
+COLOURS
+*/
+
+:root {
+
+}
+
+
 
 /*
 LAYOUT SPECIFIC STYLING
@@ -65,10 +74,10 @@ body {
 .section-wrapper {
     display: grid;
     grid-template-columns: 200px auto;
-    gap: 20px;
+    gap: 40px;
 
     margin: 20px auto;
-    max-width: 1200px;
+    max-width: 1250px;
 }
 
 .section-wrapper header {
@@ -85,22 +94,22 @@ body {
 
 .section-wrapper header > .inner {
     padding: 5px;
+    background-color: rgb(230,230,230);
+}
 
-    background-color: rgb(240,240,240);
+.section-wrapper header > .inner:hover {
+    box-shadow: 0px 0px 20px rgb(202,202,202);
 }
 
 .section-wrapper header .banner {
     text-decoration: none; /* ENSURE NO UNDERLINE ON BANNER TEXT */
 }
 
-.section-wrapper header .banner img {
+.section-wrapper header img {
     display: block;
     max-width: 100%;
 }
 
-.section-wrapper header .banner img:hover {
-    content: url("/static/res/std/pot-goose-gif.gif");
-}
 
 .section-wrapper header .banner h1 {
     margin: 0;
@@ -173,6 +182,20 @@ a:visited {
 }
 
 
+h1,
+h2 {
+    padding: 0 1px;
+    border-bottom: 1px solid rgb(202,202,202);
+}
+
+h3, 
+h4,
+h5, 
+h6 {
+    font-weight: bold;
+}
+
+
 /*
 SPECIFIC STYLING RULES
 */
@@ -180,4 +203,17 @@ SPECIFIC STYLING RULES
 #silly-city {
     width: 100%;
     height: 90px;
+}
+
+
+/*
+HAHA FUNNY LAUGH
+*/
+
+#honk_trigger {
+    cursor: pointer;
+}
+
+#honk_trigger:hover {
+    content: url("/static/res/std/pot-goose-gif.gif");
 }
