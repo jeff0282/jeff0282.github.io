@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Libre Franklin';
-    src: url('LibreFranklin-BlackItalic.woff2') format('woff2'),
-        url('LibreFranklin-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
-
