@@ -7,19 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Webgoose.net</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/res/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/res/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/res/fav/favicon-16x16.png">
+    <link rel="manifest" href="/static/res/fav/site.webmanifest">
+    
     <link rel="stylesheet" href="/static/stylesheet/main.css">
 </head>
 
 <body>
 
-    <div class="sections-wrapper">
+    <div class="section-wrapper">
 
         <header>
-            <a href="/" class="banner-text">Webgoose.net</a>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/other/">Other Pages</a>
-            </nav>
+            <div class="inner">
+                <img src="/static/res/std/pot-goose-normal.png">
+                <a href="/">Webgoose.net</a>
+                <nav>
+                    <a href="/">Home</a>
+                    <a href="/other/">Other Pages</a>
+                </nav>
+            </div>
         </header>
 
 
