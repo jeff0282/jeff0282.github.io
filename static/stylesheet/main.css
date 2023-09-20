@@ -160,6 +160,7 @@ GENERAL STYLING
 
 a {
     cursor: pointer;
+    color: unset;
     text-decoration: dotted underline;
 }
 
