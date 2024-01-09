@@ -8,96 +8,311 @@
 
     <title>Home - Potgoo.se - Travis F. Campbell</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/res/fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/res/fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/res/fav/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/res/site/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/res/site/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/res/site/fav/favicon-16x16.png">
     <link rel="manifest" href="/static/res/fav/site.webmanifest">
     
-    <link rel="stylesheet" href="/static/stylesheet/main.css">
-
-    <!-- PREFETCH GIF POTGOOSE BANNER IMAGE USED IN CSS -->
-    <link rel="prefetch" as="image/gif" href="/static/res/std/pot-goose-gif.gif">
+    <link rel="stylesheet" href="/static/stylesheet/font.css">
+    <link rel="stylesheet" href="/static/stylesheet/var.css">
+    <link rel="stylesheet" href="/static/stylesheet/layout.css">
+    <link rel="stylesheet" href="/static/stylesheet/layout-styling.css">
+    <link rel="stylesheet" href="/static/stylesheet/custom_elements.css">
+    <link rel="stylesheet" href="/static/stylesheet/content-styling.css">
 </head>
 
 <body>
 
-    <div class="section-wrapper">
-
-        <header>
-            <div class="inner">
-                    <img id="honk_trigger" src="/static/res/std/pot-goose-normal.png">
-                    <a href="/" class="banner">
-                        <h1>potgoo.se</h1>
-                    </a>
-                <nav>
-                    <a href="/">Home</a>
-                    <a href="/other/">Other Pages</a>
-                </nav>
+    <div class="layout-container">
+        <div class="side-panel">
+            
+            <header id="honk_trigger">
+                <div class="img">
+                    <img src="/static/res/site/potgoose-transparent.png">
+                </div>
+                <div class="text">
+                    <span class="heading">potgoo.se</span>
+                    <span class="subheading">&lt;Travis F. Campbell&gt;</span>
+                </div>
+            </header>
+                
+            <div class="subheader">
+                <div class="inner scrolling-container">
+                    <span> // Under Construction - Hard Hat Area // </span>
+                </div>
             </div>
-        </header>
+
+            <nav class="titled-box">
+                <div class="title">nav</div>
+                <a href="/">Home</a>
+                <a href="#about">About</a>
+                <a href="#interests">Interests</a>
+                <a href="#nicknames">Nicknames</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <nav class="titled-box">
+                <div class="title">misc</div>
+                <a href="#site-credits">Site-Wide Credits</a>
+                <a href="#licensing">Licensing Info</a>
+            </nav>
+        </div>
+
+        <div class="main-panel">
+            <div class="content">
+                <img class="banner-img border" src="/static/res/site/slateford-gold-sky.jpg">
+            
+<!-- intro section -->
+<h1 id="home">A Warm Welcome to PotGoo.se!</h1>
+<figure class="aside right">
+    <img src="/static/res/site/potgoose.jpg">
+    <audio src="/static/audio/UGG-Honk/Honk-muffled2.ogg" controls></audio>
+    <figcaption>A Goose in a Pot. A PotGoose, if you will</figcaption>
+</figure>
+
+<p>
+    Hey! Welcome to my little corner of the web! A dumping ground for all of my interests and such.
+</p>
+
+<p>
+    I'm Travis, a CompSci student and proud owner of <a href="#nicknames">about 17.48 billion nicknames</a>.
+    I hope you like <a href="https://fonts.google.com/specimen/Comic+Neue">Comic Sans</a> (or rather Comic Neue) 
+    because I use it everywhere!
+</p>
+
+<p>
+    At present, this site is awaiting the completion of <a href="https://github.com/jeff0282/webgoose">Webgoose</a>, 
+    my little baby Static Site Generator Framework. I've created a <a href="https://webgoose.net">second site</a> to document
+    its development.
+</p>
+
+<p>
+    Until then, I'm just gonna dump everything on this homepage :3
+</p>
 
 
-        <main>
-            <div class="breadcrumbs">
-                <span><a href="/">Home</a></span>
+
+<!-- interests section -->
+<h2 id="interests">Interests</h2>
+<figure class="right aside clear">
+    <img src="/static/res/std/me.jpg" height="128px" width="128px">
+    <figcaption>jumpscare.</figcaption>
+</figure>
+<p>
+    This is by no means an exhaustative list - simply just the bigger hobbies of mine.
+</p>
+
+
+<h3>Programming</h3>
+<p>
+    I enjoy the process of designing and iterating on software solutions, though
+    I do find I burn myself out quite often by spending far, far too much time on it.
+</p>
+<p>
+    My current language best-friend is Python, though I yearn for strict typing... and 
+    Typescript interfaces... 
+</p>
+
+
+<h3>Train & Bus Spotting et plus</h3>
+<figure class="aside right">
+    <img src="/static/res/site/class-380-glasgow.jpg">
+    <figcaption>Scotrail 380012 in Platform 15 at Glasgow Central Station</figcaption>
+</figure>
+<p>
+    I've always loved buses and trains; the sounds especially.
+</p>
+
+<p>
+    Below I've compiled a shortlist of my favourite types in descending order. 
+</p>
+
+<h4>Trains:</h4>
+<ul>
+    <li>Class 373 Eurostars</li>
+    <li>Class 365 Networkers (RIP)</li>
+    <li>Class 43 Intercity 125s (With Paxman Valenta powerplants)</li>
+    <li>Class 158 Super-Sprinters</li>
+    <li>Class 68 (Very Loud)</li>
+    <li>Class 334 Junipers (Ya Booey Scotrail! 3-by-2 seating)</li>
+    <li>Class 380 Desiros (THE defacto electric multiple unit)</li>
+    <li>Class 170 Turbostars (THE defacto diesel multiple unit)</li>
+    <li>Class 385 AT200s (if little boring)</li>
+    <li>Class 205 'Thumpers'</li>
+</ul>
+
+<h4>Buses:</h4>
+<figure class="aside right">
+    <video src="/static/transport/bus/dennis-trident/cardinal-buses-TA950[YT-Frozzles-N5Zhn9cdQcM].mp4" controls></video>
+    <figcaption>Cardinal Buses TA950 Dennis Trident ALX400<br>Source: <a href="https://youtube.com/watch?v=N5Zhb9cdQcM">Frozzles on Youtube</a></figcaption>
+</figure>
+<ul>
+    <li>Dennis Trident Alexander ALX400 (SEX! SEX!!!)</li>
+    <li>Volvo B10M Alexander PS</li>
+    <li>ADL Enviro400 (~2005-2009)</li>
+    <li>ADL Enviro400 Topodyn (London Units, ~2012 reg)</li>
+    <li>Volvo B8R MCV eVoRa</li>
+    <li>Volvo B9TL Wrightbus Eclipse Gemini 2</li>
+</ul>
+
+<h3>Field Recording</h3>
+<p>
+    This is mostly an extension of train & bus-spotting and my love of everyday, underappreciated sounds.
+    Unfortunately, my phone's microphones (Pixel 2) don't quite cut it, so I've had to purchase a "proper" solution
+</p>
+<p>
+    With my recent aquisition of a Tascam DR-07MKII, I plan to record train traction motors, bus engines, and other 
+    associated sounds like buzzers, bells, door chimes, ticket machines, etc.
+</p>
+
+
+<h3>Jeff-ing Around</h3>
+<figure class="aside right">
+    <img src="/static/res/site/crammond-teeth.jpg"> 
+    <figcaption>The Crossing at Crammond Island, Edinburgh</figcaption>
+</figure>
+<p>
+    I describe "Jeff-ing Around" as just seeking out interesting things in everyday places.
+</p>
+<p>
+    For me this tends to include Grafitti and Street Art, Public Installations and Architecture,
+    Unusual Views, Abandoned/Poorly Maintained stuff and things like that.
+</p>
+<p>
+    I'm not a backpacker or anything, but I like getting out and just exploring what's around.
+</p>
+    
+
+<h3>Music & Audio Equipment</h3>
+<p>
+    I make passionate love to my Beyerdynamic DT1990 Pros everyday while blasting 'Deftones - This Place Is Death' like
+    the emo girlie I am :3
+</p>
+<p>
+    Music and sound are a huge part of my life. My music library may not be big, but that certainly doesn't hamper my
+    enthusiasm. I'm a huge fan of interesting sound progressions and, with vocals, place more importance on vocalisation rather than the 
+    vocals themselves.
+</p>
+<p>
+    I've always quite enjoyed how different pieces of audio equipment colour the sound in their own way. Headphones are 
+    very good for this. I tend to be a fan of a brighter sound signature, though I enjoy faithful representations of the full
+    range of sound.
+</p>
+
+
+<h3>Bicycles and Bicycle Maintenance</h3>
+<figure class="aside right">
+    <img src="/static/res/site/jeffbike2-on-158.jpg">
+    <figcaption>JeffBike2 parked aboard a Scotrail Class 158 Super-Sprinter</figcaption>
+</figure>
+<p>
+    I love the feeling of building and maintaining something that you can actually use. For this, bicycles are perfect.
+    With a couple of tools, some grit and patience, you can have a perfectly serviceable ride to work/wherever else.
+</p>
+<p>
+    My current bike, the JeffBike 2, is a 3x9spd, fully rigid custom build based on a 2002 Specialised Rockhopper A1FS. It's predecessor, 
+    a heavily modified 1998 Scott Rockwood (in bright, spanking yellow), was retired due to cracks forming in the siezed seatpost. RIP JeffBike 1, 1998-2023.
+</p>
+<p>
+    I plan to try bikepacking later in the year, once it warms up, which I'll likely document on here.
+</p>
+
+
+<h2 id="nicknames">Nicknames</h2>
+<p>I have a lot of them. So, here's a comprehensive list ordered most-to-least common (roughly)</p>
+<ul>
+    <li>Jeff (variations: Jef, Jer)</li>
+    <li>Trav</li>
+    <li>Sideshow Bob (variations: Sideshow)</li>
+    <li>Ice Spice (big fan of this one)</li>
+    <li>T-Money</li>
+    <li>T-Unit</li>
+    <li>T-Dog (variations: Travdog)</li>
+    <li>T-Man</li>
+    <li>Carrot Top</li>
+    <li>Travbob</li>
+    <li>Femboy</li>
+    <li>Boykisser (hehe..)</li>
+    <li>Tarvis (variations: Tarvisey)</li>
+    <li>'That guy who plays for Chelsea' (variations: David Luiz)</li>
+    <li>Twavy (variations: Twav)</li>
+    <li>Gose Whisperer (variations: Goose Whisperer)</li>
+    <li>Mr President (defunct)</li>
+    <li>Matrix Man (a high school carry-over)</li>
+    <li>Curly Fry (defunct)</li>
+    <li>Tardis (defunct)</li>
+    <li>Travilicious (nah.. not a fan)</li>
+    <li>Trevor</li>
+    <li>Jesus (I don't even know.. but it's happened twice)</li>
+    <li>T-cock (my favourite, yet least used. Why live..?)</li>
+</ul>
+
+<h2 id="contact">Contacting Me</h2>
+<p>
+    You're welcome to contact me by email at the address below.
+</p>
+<p>
+    In order to prevent unwanted, automated spam, I've encoded my email address below to Base64. Simply decode it and you'll have my address :)
+</p>
+<p>
+    <i>Not Sure? Here's a link to an <a href="https://www.base64decode.org/">Online Base64 Decoder</a>. Just copy and paste in the garbled text and hit decode!</i>
+</p>
+<pre class="titled-box"><div class="title">My Email Address</div><code>dGZjQHBvdGdvby5zZQ==</code></pre>
+
+<h2 id="site-credits">Site Wide Credits</h2>
+<h3>Fonts:</h3>
+<a href="https://comicneue.com/">Comic Neue</a> (has many contributors, which can be found through the provided link)<br>
+<a href="https://github.com/dtinth/comic-mono-font/">Comic Mono</a> by <a href="https://dt.in.th/">Thai Pangsakulyanont</a><br>
+<a href="https://www.dafont.com/seven-segment.font">Seven Segment</a> by <a href="https://kraftilab.com">Kraftilab</a>
+
+<h3>Images:</h3>
+<a href="/static/res/site/potgoose-transparent.png">The Potted Goose</a> image is credited to <a href="https://www.deviantart.com/twoodland1994">Twoodland1994 on DeviantArt</a>, to whom I have no affiliation.
+
+<h3>Sounds:</h3>
+Goose Honks are sourced from <a href="https://goose.game/">Untitled Goose Game</a>
+
+<h2 id="licensing">Licensing and Attribution</h2>
+<p>
+    All written materials, multimedia, and other such files used and/or hosted on this site can be split in two categories:
+</p>
+<h3>Own Work:</h3>
+<p>For resources that:</p>
+<ul>
+    <li>Have not been credited and/or attributed to another person or entity,</li>
+    <li>Are attributed to solely myself</li>
+</ul>
+
+<h3>Not Own Work:</h3>
+<p>For resources that:</p>
+<ul>
+    <li>Have been attributed to another person or entity (includes work partially, but not wholly, attributed to myself)</li>
+    <li>Are hotlinked from an external source</li>
+</ul>
+
+<p>
+    All resources that fall under 'Own Work' are <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, unless otherwise specified. Licensing for resources falling under 'Not Own Work' lie with their respective author(s).
+</p>
+<p>
+    Credits for resources can be found in either:
+    <ul>
+        <li>The resource's metadata (where applicable)</li>
+        <li>Near the resource in pages where it's used</li>
+        <li>In the footnotes of pages where it's used</li>
+        <li>In the <a href="#site-credits">Site Wide Credits</a></li>
+    </ul>
+</p>
+
+<footer>
+    <p>&copy; 2023 - 2024 Travis F. Campbell (jeff0282) - <a href="#site-credits">Credits</a> & <a href="#licensing">Licensing Information</a></p>
+</footer>
+
             </div>
-            
-            <img src="/static/res/std/lamlash-bay-from-fishfarm.webp">
-
-            <h1> Welcome to <i>potgoo.se</i> </h1>
-
-            <span> [!! Under Construction - Hard Hat Area !!]</span>
-
-            <p>
-                Hey! Welcome to my little corner of the Web! I'm a massive fan of Web 1.0 (muh nostalgia) and simple, clean websites, so this site is pretty much all that.
-            </p>
-
-            <p>
-                This site is currently part of a pretty big project of mine, that being Webgoose, a static site generator that will eventually be used to build this site. Currently, Webgoose is non-functional but soon, soon I promise I'll have it working... I just need a few more months.... 
-            </p>
-
-            <h2>Who Am I?</h2>
-
-            <p>
-                I'm Travis (otherwise known as 'Jeff'), a Software Engineering Student! I'm into software design and development; trains, buses, and all public transport stuffs; audio hardware (mostly headphones), bikes (commuting, touring, maintenance, etc); and just building random stuff!
-            </p>
-
-            <p>
-                Once I've got my static site generator going, I aim to dump a bunch of info here related to my interests.
-            </p>
-
-
-            <h2>Contacting Me</h2>
-            <p>
-                You're welcome to contact me using the email address in the box below. I don't use any social media platforms other than Discord (not by choice!!), so email is the best way to go for me.
-            </p>
-            
-            <p>    
-            The garbled text in the box below is my email address encoded to Base64, the rest of the string is the Bash Script to decode it. If you're not running a Linux System, copy the garbled text and paste it into an online Base64 Decoder.
-            </p>
-            
-            <p>
-                This extra step is to prevent my email being sniffed by bots and the like.. sorry!! 
-            </p>
-            <pre><code> 
-echo c29jaWFsQHdlYmdvb3NlLm5ldA== | base64 --decode 
-            </code></pre>
-
-
-            <!--
-            <p>
-                For more information on contacting me, see <a href="/other/notes-on-contacting-me/">'Notes on Contacting Me'</a>
-            </p>
-            -->
-
-            <iframe id="silly-city" src="https://silly.city/embed.html?user=jeff" title="silly.city webring" frameborder="no"></iframe>
-        </main>
-
-        <img src="/static/res/badges/infamous-konata-pic.png">
+        </div>
 
     </div>
 
     <script src="/static/script/honk.js"></script>
+    <!---<script src="/static/script//toggleAnim.js"></script>--->
 
 </body>
 

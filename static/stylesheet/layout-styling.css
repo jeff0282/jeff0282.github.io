@@ -1,0 +1,128 @@
+/*
+STYLESHEET USED TO STYLE THE LAYOUT OF POTGOO.SE - Late 2023
+*/
+
+/*
+LOCAL VARS
+*/
+:root {
+    --nav-before-content: "nav"
+}
+
+/*
+BASE STYLING
+*/
+img,
+video,
+audio {max-width: 100%; max-height: 100%;}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    color: var(--bright-text-color);
+    text-decoration: dashed underline;
+};
+a:active {color: inherit}
+
+
+/*
+LAYOUT STYLING
+*/
+body {
+    font-family: 'Comic Neue', sans-serif;
+    color: var(--normal-text-color);
+    background-color: var(--background-color);
+}
+
+.side-panel nav {
+    padding: 7px;
+    font-family: monospace;
+    font-size: 16px;
+    border: 1px solid var(--normal-border-color);
+    border-radius: 3px;
+}
+.side-panel nav a {text-decoration: none !important; width: fit-content;}
+.side-panel nav a::before {content: "[";}
+.side-panel nav a::after {content: "]";}
+.side-panel nav a:hover {color: var(--bright-text-color)};
+.side-panel nav a:active{color: var(--normal-text-color)}
+
+header {
+    display: grid;
+    box-sizing: border-box;
+    padding: 4px;
+    grid-template-columns: 55px 1fr;
+    box-shadow: var(--win-button-raised-box);
+    border: 1px solid var(--win-button-bg);
+    color: black;
+    background-color: var(--win-button-bg);
+    text-shadow: 0px 0px var(--dark-text-color);
+}
+header:active {box-shadow: var(--win-button-sunken-box); text-shadow: 1px 1px var(--dark-text-color);}
+header > .img {box-shadow: var(--win-button-sunken-box); 
+               padding: 2px; 
+               height: 51px; /*idk why this has to be hardcoded, min/fit-content don't work*/
+               background-color: black;
+            } 
+header > .img img:hover,
+header > .img img:active {animation: select-shimmy 0.3s linear infinite;}
+header > .text {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    gap: 2px;
+    padding: 0px 3px;
+}
+header > .text * {
+    text-shadow: inherit; 
+    text-decoration: none; 
+    font-family: "Comic Neue", sans-serif;
+}
+header > .text > .heading {font-size: 24px; font-weight: bold;}
+header > .text > .subheading {font-size: 14px; color: var(--background-color);}
+
+.subheader {
+    box-sizing: border-box;
+    margin-top: 5px;
+    padding: 2px;
+    background-color: var(--background-color);
+    box-shadow: var(--win-button-raised-box);
+    width: 100%;
+}
+.subheader > .inner {
+    position: relative;
+    height: 2.5ex;
+    padding: 6px 0;
+    background-color: black;
+    box-shadow: var(--win-button-sunken-box);
+    font-family: 'Seven Segment', 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 2.5ex;
+    text-transform: uppercase;
+    color: orange;
+}
+.subheader > .inner > * {
+    position: absolute;
+    min-width: 100%;
+    width: max-content;
+}
+
+.banner-img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 500px;
+    border: 1px solid var(--bright-border-color);
+}
+
+/*
+Adjustments for smaller viewports
+*/
+@media only screen and (max-width: 900px) {
+    .banner-img {
+        height: 300px;
+    }
+}

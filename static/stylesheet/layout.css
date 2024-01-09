@@ -1,0 +1,61 @@
+/*
+STYLESHEET USED TO SET THE LAYOUT OF POTGOO.SE - Late 2023
+*/
+
+/*
+LOCAL VARS
+*/
+:root {
+    /* universal properties */
+    --univ-max-layout-width: 1300px;
+    --univ-panel-gap: 40px;
+
+    /* desktop only */
+    --desktop-body-margin: 30px;
+    --desktop-side-panel-size: 200px;
+
+    /* mobile only */
+    --mobile-body-margin: 20px;
+}
+
+
+/*
+LAYOUT STYLING
+*/
+body {margin: var(--desktop-body-margin);}
+body > .layout-container {
+    display: grid;
+    margin: auto;
+    grid-template-columns: var(--desktop-side-panel-size) 1fr;
+    gap: var(--univ-panel-gap);
+    width: var(--univ-max-layout-width);
+    max-width: 100%;
+}
+
+.side-panel header {max-width: var(--desktop-side-panel-size)}
+.side-panel nav {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.main-panel > .content img:first-child {margin-top: 0px;}
+
+/*
+TRANSFORM TO MOBILE
+*/
+@media only screen and (max-width: 725px) {
+    body {margin: var(--mobile-body-margin);}
+    body > .layout-container {
+      grid-template-columns: unset;
+      grid-template-rows: auto 1fr;
+    }
+    .side-panel {position: static;}
+    .side-panel nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
