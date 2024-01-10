@@ -2,8 +2,8 @@
 STYLESHEET USED TO STYLE THE CONTENT OF POTGOO.SE - Late 2023
 */
 
-h1 {font-size: 40px; margin: 24px 0 10px;}
-h2 {font-size: 36px; margin: 24px 0 10px;}
+h1 {font-size: 40px; margin: 28px 0 10px;}
+h2 {font-size: 36px; margin: 28px 0 10px;}
 h3 {font-size: 32px; margin: 24px 0 10px;}
 h4 {font-size: 29px; margin: 20px 0 10px;}
 h5 {font-size: 26px; margin: 20px 0 10px;}
@@ -37,7 +37,8 @@ h1,h2 {border-bottom: 1px solid var(--normal-text-color); clear: both; font-weig
 .content a {color: var(--bright-text-color); text-decoration: dashed underline;}
 .content a:hover {text-decoration: underline;}
 
-.content img {
+.content img,
+.content video {
     box-sizing: border-box;
     max-height: 600px;
     margin: 10px 0;
@@ -50,13 +51,16 @@ h1,h2 {border-bottom: 1px solid var(--normal-text-color); clear: both; font-weig
 }
 
 .content pre,
-.content figure {
+.content figure,
+.content iframe {
     display: block;
+    box-sizing: border-box;
     max-width: 100%;
     margin: 10px 0;
     padding: 10px;
     border: 1px solid var(--normal-border-color);
 }
+.content iframe {width: 100%;}
 .content pre {white-space: pre-line; height: fit-content; font-family: "Comic Mono", monospace;}
 .content code {font-family: inherit;}
 .content figure {width: fit-content;}
