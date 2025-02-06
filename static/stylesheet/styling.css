@@ -1,0 +1,8 @@
+
+:root {
+    --dark-backdrop-color: #bbb;
+    --light-backdrop-color: #eee;
+}
+
+html {background-color: var(--dark-backdrop-color);}
+body {background-color: var(--light-backdrop-color);}

@@ -1,61 +1,231 @@
-/*
-STYLESHEET USED TO SET THE LAYOUT OF POTGOO.SE - Late 2023
-*/
-
-/*
-LOCAL VARS
-*/
+ 
 :root {
-    /* universal properties */
-    --univ-max-layout-width: 1300px;
-    --univ-panel-gap: 40px;
+    --site-padding: 25px;
+    --std-padding: 10px;
+    --std-radius: 5px;
+    --std-shadow: 0 0 10px var(--shadow-color);
 
-    /* desktop only */
-    --desktop-body-margin: 30px;
-    --desktop-side-panel-size: 200px;
-
-    /* mobile only */
-    --mobile-body-margin: 20px;
+    /* colors */
+    --light-backdrop-color: #ececec;
+    --content-backdrop-color: #fcfcfc;
+    --nav-backdrop-color: #eee;
+    --outline-color: #222;
+    --shadow-color: #000;
+    
+    --std-text: #434343;
+    --grey-text: #555;
 }
 
+html {
+    box-sizing: border-box;
+    margin: 10px;
 
-/*
-LAYOUT STYLING
-*/
-body {margin: var(--desktop-body-margin);}
-body > .layout-container {
-    display: grid;
-    margin: auto;
-    grid-template-columns: var(--desktop-side-panel-size) 1fr;
-    gap: var(--univ-panel-gap);
-    width: var(--univ-max-layout-width);
-    max-width: 100%;
+    font-family: serif;
 }
 
-.side-panel header {max-width: var(--desktop-side-panel-size)}
-.side-panel nav {
+body {
+    box-sizing: border-box;
+    margin: 15px auto;
+    padding: 0 5px;
+    max-width: 700px;
+
+    color: var(--std-text);
+    background-color: var(--light-backdrop-color);
+}
+
+header {
+    overflow: hidden;
+    clear: both;
+    margin: 10px auto;
+    max-width: max-content;
+
+    border-radius: 20px;
+    background-color: var(--nav-backdrop-color);
+    box-shadow: var(--std-shadow);
+}
+
+nav {
     display: flex;
-    position: relative;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+nav > * {
+    flex: 1 0 max-content;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: -1px; /*fixes double border issues*/
+    white-space: nowrap;
+    overflow: hidden;
+
+    border-width: 0 1px;
+    border-color: var(--outline-color);
+    border-style: solid;
+}
+nav > a:hover {
+    text-decoration: underline;
+}
+nav > *:last-child {border-right: none}
+
+.banner-button {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    font-size: 16px;
+    font-weight: normal;
+
+    text-decoration: none !important;
+    background-color: #333;
+    color: #fff;
+    transition: background-color 150ms;
+}
+.banner-button:hover {
+    background-color: #777;
+}
+.banner-button img {
+    max-width: 3ch;
+    max-height: 3ch;
 }
 
-.main-panel > .content img:first-child {margin-top: 0px;}
+button,
+a.button {
+    display: block;
+    box-sizing: border-box;
+    min-width: 3ch;
+    width: fit-content;
+    margin: 5px 0;
+    padding: 5px 8px; 
 
-/*
-TRANSFORM TO MOBILE
-*/
-@media only screen and (max-width: 725px) {
-    body {margin: var(--mobile-body-margin);}
-    body > .layout-container {
-      grid-template-columns: unset;
-      grid-template-rows: auto 1fr;
-    }
-    .side-panel {position: static;}
-    .side-panel nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
+    font-family: "Comic Neue", serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid var(--outline-color);
+    background-color: rgb(240,240,255);
+    border-radius: var(--std-radius);
+    box-shadow: 2px 2px #333;
+}
+button:hover,
+a.button:hover {
+    background-color: rgb(215,215,255);
+}
+button,
+a.button:active {
+    background-color: rgb(180, 180, 255);
+    box-shadow: inset 1px 1px #666;
+}
+
+content {
+    display: block;
+    margin: 50px 0;
+    clear: both;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 11px;
+    text-align: center;
+    color: var(--grey-text);
+}
+
+.button-container {
+    display: flex;
+    justify-content: stretch;
+    gap: 10px;
+}
+.button-container.stretch > * {
+    flex: 1 1 max-content;
+}
+
+.label-box {
+    position: relative;
+    box-sizing: border-box;
+    margin: 25px 0;
+    padding: 10px 10px 5px 10px;
+    clear: both;
+
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid var(--outline-color);
+    border-radius: var(--std-radius);
+}
+.label-box > .label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    padding: 2px 3px;
+
+    background-color: #444;
+    color: #fff;
+    border: 1px solid var(--outline-color);
+    border-radius: var(--std-radius);
+}
+
+pre {
+    padding: 5px;
+    background-color: #eee;
+    border: 1px solid var(--outline-color);
+    border-radius: var(--std-radius);
+}
+
+a {
+    cursor: pointer;
+}
+
+aside {
+    box-sizing: border-box;
+    float: right;
+    margin: 5px 0 5px 5px;
+    max-width: 20%;
+}
+
+.lined-header {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    margin: 15px 0 5px;
+}
+.lined-header > * {
+    flex: 1 0 auto;
+    margin: 0;
+
+    text-align: center;
+    font-family: "Comic Neue", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+.lined-header:before,
+.lined-header:after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: var(--outline-color);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* CONTENT STYLING */
+content h1,
+content h2,
+content h3 {
+    font-weight: normal;
+    margin-top: 0.8ch;
+}
+
+content img {
+    box-sizing: border-box;
+    padding: 4px;
+    border: 1px solid var(--outline-color);
+}
+
+content .center {
+    text-align: center;
 }

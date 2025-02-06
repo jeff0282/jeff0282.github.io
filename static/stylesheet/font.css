@@ -1,31 +1,3 @@
-/*
-ADDITIONAL FONTS USED IN THE STYLESHEET SET FOR POTGOO.SE - Late 2023
-*/
-
-/* SEVEN SEGMENT FONT */
-@font-face {
-    font-family: "Seven Segment";
-    src: url("/static/font/Seven_Segment/Seven_Segment.ttf");
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* MIT LICENSED ALTERNATIVE TO COMIC CODE - COMIC MONO*/
-@font-face {
-    font-family: "Comic Mono";
-    src: url("/static/font/Comic_Mono/ComicMono.ttf") format("truetype");;
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Comic Mono";
-    src: url("/static/font/Comic_Mono/ComicMono-Bold.ttf") format("truetype");;
-    font-weight: bold;
-    font-style: normal;
-}
-
-
 /* FOSS COMIC SANS ALTERNATIVE - COMIC NEUE */
 @font-face {
     font-family: "Comic Neue";
