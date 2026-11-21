@@ -1,0 +1,119 @@
+
+html {
+    background-color: black;
+}
+
+body {
+    width: 1200px;
+    max-width: calc(100% - 20px);
+    margin: 0 auto;
+    font-family: sans-serif;
+    color: white;
+}
+
+header {
+    display: grid;
+    grid-template-rows: auto auto;
+    position: fixed;
+    top: 30px;
+    left: 5px;
+    width: 135px;
+    box-sizing: border-box;
+    height: max-content;
+    padding: 5px;
+    border: 1px solid white;
+    font-family: monospace;
+}
+header::before {
+    position: absolute;
+    top: -25px;
+    left: -1px;
+    box-sizing: border-box;
+    background-color: #cccccc;
+    border: 1px solid #cccccc;
+    border-top-right-radius: 7px;
+    height: 25px;
+    padding: 2px;
+    width: fit-content;
+    max-width: 135px;
+    content: ">potgoo.se";
+    font-family: "Comic Neue", sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+@keyframes grow-shrink {
+    25%,
+    75% {scale: 150%;}
+    0%,
+    50%,
+    100% {scale: 100%}
+}
+
+header .img-wrap {
+    display: block;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid white;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+header img:hover {
+    animation: grow-shrink 1s ease-in-out infinite;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 4px;
+    font-size: 14px;
+}
+nav a {
+    display: block;
+    padding: 3px 4px 3px 0;
+}
+nav a::first-letter{
+    text-decoration: underline;
+}
+nav a:hover {
+    background-color: white;
+    color: black;
+}
+nav a:active {
+    text-decoration: underline;
+    background-color: black;
+    color: white;
+}
+
+main {
+    width: 1200px;
+    max-width: calc(100% - 250px - 20px);
+    margin: 10px auto;
+}
+
+footer {
+    text-align: center;
+    font-family: monospace;
+    font-size: 12px;
+    width: 66%;
+    min-width: fit-content;
+    padding: 10px 10px;
+    margin: 20px auto;
+    border-top: 1px solid white;
+}
+
+
+/*
+MISC
+*/
+
+a {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}

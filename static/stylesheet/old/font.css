@@ -1,0 +1,28 @@
+/* FOSS COMIC SANS ALTERNATIVE - COMIC NEUE */
+@font-face {
+    font-family: "Comic Neue";
+    src: url("/static/font/Comic_Neue/ComicNeue-Regular.ttf") format("truetype");;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Comic Neue";
+    src: url("/static/font/Comic_Neue/ComicNeue-Italic.ttf") format("truetype");;
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Comic Neue";
+    src: url("/static/font/Comic_Neue/ComicNeue-Bold.ttf") format("truetype");;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Comic Neue";
+    src: url("/static/font/Comic_Neue/ComicNeue-BoldItalic.ttf") format("truetype");;
+    font-weight: 600;
+    font-style: italic;
+}

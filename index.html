@@ -3,91 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travis F. Campbell @ Potgoo.se</title>
+    <title>Travis F. Campbell @ potgoo.se</title>
 
+    <link rel="stylesheet" href="/static/stylesheet/main.css">
     <link rel="stylesheet" href="/static/stylesheet/font.css">
-    <link rel="stylesheet" href="/static/stylesheet/layout.css">
 </head>
 <body>
 
     <header>
+        <div class="img-wrap" id="gong_button" href="/"><img src="/static/res/personality/logo-transparent.png"></div>
+        
         <nav>
-            <a href="/" class="banner-button">
-                <img src="/static/res/personality/logo-transparent.png">
-                <span>Potgoo.se</span>
-            </a>
-            <a>These</a>
-            <a>Don't</a>
-            <a>Work</a>
-            <a>Right Now</a>
+            <a>nav</a>
         </nav>
     </header>
 
-    <content>
-        <aside><img src="/static/res/personality/me.jpg"></aside>
-        <h1>Welcome to Potgoo.se</h1>
-        
-        <p>
-            Hello, I'm Travis (a.k.a Jeff)
-        </p>
-
-        <p>
-            There's not a whole lot on here at the moment. I'm working on a Static Site Generator, Webgoose,
-            which will make filling this site a lot easier (I've been working on it on-and-off for the last 3 years, please do not expect any results
-            I am hopeless at this teehee..!).
-        </p>
-
-        <p>
-            I'm into Hobby Programming, Bicycles (Maintenance, Touring, Commuting, etc), Trains, Buses, and Field Recording.
-        </p>
-
-        <p>
-            More to follow in the next 10-15 business years when I finally learn to program things to completion (mfw scope creep)
-        </p>
-
-        <p>
-            For now though, have this recording of a Class 334 EMU setting off from Haymarket Station, Platform 4, with a noisy Class 170 Turbostar in the background :)
-        </p>
-
-        <audio src="/static/audio/train/Class-334-Haymarket-P4-Setoff.mp3" controls></audio>
-
-        <div class="label-box">
-            <div class="label">Contact Me</div>
-            <p>You're welcome to contact me using the below email address.</p>
-            <p>The address below has been encoded to Base64 to prevent email scraping:</p>
-            <pre>dGZjQHBvdGdvby5zZQ==</pre>
-            <p>
-                <i>
-                    Not Sure? Here's a link to an <a href="https://www.base64decode.org/">Online Base64 Decoder</a>.
-                    Simply copy and paste in the garbled text and hit decode!
-                </i>
-            </p>
-        </div>
-
-        <div class="label-box">
-            <div class="label">Links and Webrings</div>
-            <div class="lined-header"><p>Links Elsewhere</p></div>
-            <div class="button-container stretch">
-                <a href="https://github.com/jeff0282" target="_blank" class="button">Github</a>
-                <a href="https://linkedin.com/in/travis-f-campbell" class="button">Linkedin</a>
-            </div>
-            <div class="button-container stretch">
-                <a href="https://dylotron.github.io" class="button" target="_blank">Dylan's Website :)</a>
-            </div>
-            <div class="lined-header"><p>Webrings</p></div>
-            <p class="center">Proudly a founding member of the Silly.City Webring!</p>
-            <div class="button-container stretch">
-                <a href="https://silly.city/prev?user=Travis" class="button">&lt;~</a>
-                <a href="https://silly.city?user=Travis" target="_blank" class="button">Silly.City Webring</a> <!-- username field not used, but provided just incase such a feature is added -->
-                <a href="https://silly.city/next?user=Travis"class="button">~&gt;</a>
-            </div>
-        </div>
+    <main>
+        <content>
 
 
-    </content> 
+        </content>
 
-    <footer>
-        Travis F. Campbell @ potgoo.se - 2025
-    </footer>
+        <footer>
+            Travis F. Campbell 2026 - Potgoo.se - Generated Using <a href="https://github.com/microsounds/kagami">Kagami v0.6.5</a>
+        </footer>
+    </main>
+    
 </body>
+
+<script>
+
+const honk = new Audio("/static/audio/honk.mp3")
+const honk_button = document.getElementById("gong_button");
+function playAudio(audio){ /* RETURNS A PROMISE, ENABLING US TO WAIT FOR AUDIO TO FINISH */
+  return new Promise(res=>{
+    audio.play()
+    audio.onended = res
+  })
+}
+
+honk_button.addEventListener("click", async function() {
+    await playAudio(honk);
+    window.location.href = "/";
+}
+)
+</script>
+
 </html>
